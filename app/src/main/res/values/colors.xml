@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="vermelho">#FF0000</color>
+    <color name="verde">#DAF7A6</color>
+    <color name="cinza">#ADADAD</color>
+    <color name="chumbo">#141414</color>
+    <color name="azul">#33E0FF</color>
+    <color name="amarelo">#FFC300</color>
+    <color name="rosa">#b4283c</color>
+    <color name="branco">#FFFFFF</color>
+
+    <color name="corDoTexto">@color/branco</color>
+
+</resources>
