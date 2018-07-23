@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:label="Digital Burguer"
         android:roundIcon="@drawable/hamburguer"
+        android:icon="@drawable/hamburguer"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
