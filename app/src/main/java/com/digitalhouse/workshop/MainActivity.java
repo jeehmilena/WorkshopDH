@@ -24,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void finalizarPedido(View view) {
 
+        // Totalizador de valor
         float total = 0F;
 
+        // Verifica se o item esta preenchido
         if(item1.isChecked()){
+            // Sumariza o valor do item 1
             total += Float.parseFloat(item1.getText().toString());
         }
         if(item2.isChecked()){
@@ -37,12 +40,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String mensagem;
+        // Exibe diferentes mensagens de acordo com criterio
         if(total == 0){
             mensagem = "Por favor, selecione pelo menos um item!";
         }else{
             mensagem = "Valor total do Pedido: R$" + total;
         }
 
+        // Exibe mensagem
         Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
     }
 }
