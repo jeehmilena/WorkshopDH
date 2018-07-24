@@ -2,4 +2,4 @@
 
 Projeto para Workshop na Digital House.
 
-A branch `blank` tem o projeto com as cores iniciais sem imagem definida e deve ser usada para o passo a passo de personalização que deve gerar um app como da branch `master`.
+Essa é uma versão customizada do aplicativo para workshop na escola Digital House criado e desenvolvido por Fabio Tadashi https://github.com/fabiotadashi 
