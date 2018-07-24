@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WorkshopDigitalHouse.iml" filepath="$PROJECT_DIR$/WorkshopDigitalHouse.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/worshopDH.iml" filepath="$PROJECT_DIR$/worshopDH.iml" />
     </modules>
   </component>
 </project>
