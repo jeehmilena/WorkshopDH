@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
         item1 = findViewById(R.id.checkBox);
         item2 = findViewById(R.id.checkBox2);
         item3 = findViewById(R.id.checkBox3);
+
+        ImageView imagem = findViewById(R.id.imageView);
+        imagem.setAlpha(0F);
+        imagem.animate()
+                .alpha(1F)
+                .setDuration(5000)
+                .start();
+
     }
 
     public void finalizarPedido(View view) {
