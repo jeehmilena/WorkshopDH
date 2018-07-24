@@ -8,7 +8,7 @@
         android:roundIcon="@drawable/hamburguer"
         android:icon="@drawable/hamburguer"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
