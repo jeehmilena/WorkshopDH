@@ -1,8 +1,10 @@
 package com.digitalhouse.workshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     private CheckBox item2;
     private CheckBox item3;
     private TextView totalGeral;
+    private Button botaoFinalizar;
+    float total = 0F;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         item2 = findViewById(R.id.checkBox2);
         item3 = findViewById(R.id.checkBox3);
         totalGeral = findViewById(R.id.totalGeral);
+        botaoFinalizar = findViewById(R.id.botaoFinalizar);
 
         ImageView imagem = findViewById(R.id.imageView);
         imagem.setAlpha(0F);
@@ -38,15 +43,21 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         item2.setOnCheckedChangeListener(this);
         item3.setOnCheckedChangeListener(this);
 
+
+        botaoFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Sorvetes salvos com sucesso!",Toast.LENGTH_SHORT).show();
+
+                Intent intentVaiPraHome = new Intent(MainActivity.this, Home.class );
+                startActivity(intentVaiPraHome);
+
+            }
+        });
     }
 
-
-
-
     public void finalizarPedido(View view) {
-
-        // Totalizador de valor
-        float total = 0F;
 
         // Verifica se o item esta preenchido
         if(item1.isChecked()){
@@ -62,17 +73,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         totalGeral.setText("R$ "+total);
 
-        String mensagem;
-        // Exibe diferentes mensagens de acordo com criterio
-        if(total == 0){
-            mensagem = "Por favor, selecione pelo menos um item!";
-        }else{
-            mensagem = "Valor total do Pedido: R$" + total;
-
-        }
-
-        // Exibe mensagem
-        Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
     }
 
     @Override
