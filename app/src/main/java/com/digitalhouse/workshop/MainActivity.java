@@ -4,14 +4,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private CheckBox item1;
     private CheckBox item2;
     private CheckBox item3;
+    private TextView totalGeral;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         item1 = findViewById(R.id.checkBox);
         item2 = findViewById(R.id.checkBox2);
         item3 = findViewById(R.id.checkBox3);
+        totalGeral = findViewById(R.id.totalGeral);
 
         ImageView imagem = findViewById(R.id.imageView);
         imagem.setAlpha(0F);
@@ -29,7 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 .setDuration(5000)
                 .start();
 
+
+        item1.setOnCheckedChangeListener(this);
+        item2.setOnCheckedChangeListener(this);
+        item3.setOnCheckedChangeListener(this);
+
     }
+
+
+
 
     public void finalizarPedido(View view) {
 
@@ -48,15 +60,23 @@ public class MainActivity extends AppCompatActivity {
             total += Float.parseFloat(item3.getText().toString());
         }
 
+        totalGeral.setText("R$ "+total);
+
         String mensagem;
         // Exibe diferentes mensagens de acordo com criterio
         if(total == 0){
             mensagem = "Por favor, selecione pelo menos um item!";
         }else{
             mensagem = "Valor total do Pedido: R$" + total;
+
         }
 
         // Exibe mensagem
         Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        finalizarPedido(null);
     }
 }
