@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         totalGeral = findViewById(R.id.totalGeral);
         botaoFinalizar = findViewById(R.id.botaoFinalizar);
 
+        //animação de "surgir" a imagem
         ImageView imagem = findViewById(R.id.imageView);
         imagem.setAlpha(0F);
         imagem.animate()
@@ -48,10 +49,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(MainActivity.this, "Sorvetes salvos com sucesso!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Sorvetes salvos com sucesso!",Toast.LENGTH_SHORT).show();
 
-                Intent intentVaiPraHome = new Intent(MainActivity.this, Home.class );
-                startActivity(intentVaiPraHome);
+            Intent intentVaiPraHome = new Intent(MainActivity.this, HomeActivity.class );
+            startActivity(intentVaiPraHome);
 
             }
         });
