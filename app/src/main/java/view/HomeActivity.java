@@ -1,4 +1,4 @@
-package com.digitalhouse.workshop;
+package view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.digitalhouse.workshop.R;
 
 public class HomeActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -56,7 +58,7 @@ public class HomeActivity extends AppCompatActivity implements CompoundButton.On
             total+= Float.parseFloat(checkFrango.getText().toString());
         }
 
-        totalGeral.setText("R$ "+ total);
+        totalGeral.setText("TOTAL: R$ "+ total);
     }
 
     @Override

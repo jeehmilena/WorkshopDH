@@ -1,4 +1,4 @@
-package com.digitalhouse.workshop;
+package view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.digitalhouse.workshop.R;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             total += Float.parseFloat(item3.getText().toString());
         }
 
-        totalGeral.setText("R$ "+total);
+        totalGeral.setText("TOTAL: R$ "+total);
 
     }
 
