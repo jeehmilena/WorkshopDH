@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity implements CompoundButton.On
         checkMarguerita = findViewById(R.id.checkboxMarguerita);
         checkToscana = findViewById(R.id.checkboxToscana);
         checkFrango = findViewById(R.id.checkboxFrango);
-        botaoFinalizar = findViewById(R.id.botaoFinalizar);
+        botaoFinalizar = findViewById(R.id.btnFinalizar);
         totalGeral = findViewById(R.id.txtTotalGeral);
 
         checkMarguerita.setOnCheckedChangeListener(this);
