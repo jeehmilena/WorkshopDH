@@ -12,6 +12,6 @@
     <color name="vermelho">#b4283c</color>
     <color name="branco">#ffffff</color>
 
-    <color name="corDoTexto">@color/branco</color>
+    <color name="corDoTexto">@color/chumbo</color>
 
 </resources>
