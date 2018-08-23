@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.digitalhouse.workshop.R;
 
-public class HomeActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class PizzaActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private CheckBox checkMarguerita;
     private CheckBox checkToscana;
@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements CompoundButton.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_pizza);
 
         checkMarguerita = findViewById(R.id.checkboxMarguerita);
         checkToscana = findViewById(R.id.checkboxToscana);
@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity implements CompoundButton.On
         botaoFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "Pedido Finalizado com sucesso!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PizzaActivity.this, "Pedido Finalizado com sucesso!", Toast.LENGTH_SHORT).show();
             }
         });
 
