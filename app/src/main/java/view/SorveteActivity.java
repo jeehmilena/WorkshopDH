@@ -33,15 +33,6 @@ public class SorveteActivity extends AppCompatActivity implements CompoundButton
         totalGeral = findViewById(R.id.totalGeral);
         botaoFinalizar = findViewById(R.id.botaoFinalizar);
 
-        //animação de "surgir" a imagem
-        ImageView imagem = findViewById(R.id.imageView);
-        imagem.setAlpha(0F);
-        imagem.animate()
-                .alpha(1F)
-                .setDuration(5000)
-                .start();
-
-
         item1.setOnCheckedChangeListener(this);
         item2.setOnCheckedChangeListener(this);
         item3.setOnCheckedChangeListener(this);
