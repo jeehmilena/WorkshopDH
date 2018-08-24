@@ -8,7 +8,7 @@
         android:label="Digital Burguer"
         android:roundIcon="@drawable/hamburguer"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/AppTheme">
         <activity android:name="view.TelaInicialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
