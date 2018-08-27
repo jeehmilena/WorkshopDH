@@ -1,4 +1,4 @@
-package view;
+package com.digitalhouse.workshop.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +27,7 @@ public class TelaInicialActivity extends AppCompatActivity {
         imagemPizza.setAlpha(0F);
         imagemPizza.animate()
                 .alpha(1F)
-                .setDuration(5000)
+                .setDuration(2500)
                 .start();
 
         //animação de "surgir" a imagem Sorvete
@@ -35,7 +35,7 @@ public class TelaInicialActivity extends AppCompatActivity {
         imagemSorvete.setAlpha(0F);
         imagemSorvete.animate()
                 .alpha(2F)
-                .setDuration(10000)
+                .setDuration(2500)
                 .start();
 
         //animação de "surgir" a imagem Hamburguer
@@ -43,7 +43,7 @@ public class TelaInicialActivity extends AppCompatActivity {
         imagemHamburguer.setAlpha(0F);
         imagemHamburguer.animate()
                 .alpha(3F)
-                .setDuration(15000)
+                .setDuration(2500)
                 .start();
 
         botaoInicial.setOnClickListener(new View.OnClickListener() {

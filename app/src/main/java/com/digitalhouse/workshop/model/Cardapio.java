@@ -1,13 +1,15 @@
-package model;
+package com.digitalhouse.workshop.model;
 
 public class Cardapio {
 
     private String nomeItem;
     private double precoItem;
+    private boolean status;
 
-    public Cardapio(String nomeItem, double precoItem) {
+    public Cardapio(String nomeItem, double precoItem, boolean status) {
         this.nomeItem = nomeItem;
         this.precoItem = precoItem;
+        this.status = status;
     }
 
     public Cardapio() {
@@ -29,11 +31,20 @@ public class Cardapio {
         this.precoItem = precoItem;
     }
 
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Cardapio{" +
                 "nomeItem='" + nomeItem + '\'' +
                 ", precoItem=" + precoItem +
+                ", status=" + status +
                 '}';
     }
 }

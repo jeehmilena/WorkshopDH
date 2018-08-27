@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/textIcons"
-    tools:context="view.SorveteActivity">
+    tools:context="com.digitalhouse.workshop.view.SorveteActivity">
 
     <ImageView
         android:id="@+id/imageView"
