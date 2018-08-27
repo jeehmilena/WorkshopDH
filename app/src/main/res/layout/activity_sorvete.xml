@@ -148,7 +148,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="252dp"
-        android:background="@android:color/holo_green_light"
+        android:background="@color/colorAccent"
         android:text="Finalizar Pedido"
         android:textColor="@color/textIcons"
         android:textSize="18sp"
