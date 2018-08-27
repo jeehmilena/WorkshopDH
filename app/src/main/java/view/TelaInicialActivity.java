@@ -12,6 +12,7 @@ import com.digitalhouse.workshop.R;
 public class TelaInicialActivity extends AppCompatActivity {
 
     private Button botaoInicial;
+    private Button botaoTeste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class TelaInicialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         botaoInicial = findViewById(R.id.btnIniciar);
+        botaoTeste = findViewById(R.id.btnTeste);
 
         //animação de "surgir" a imagem Pizza
         ImageView imagemPizza = findViewById(R.id.imagePizza);
@@ -50,9 +52,19 @@ public class TelaInicialActivity extends AppCompatActivity {
 
                 Intent intentVaiParaMain = new Intent(TelaInicialActivity.this, SorveteActivity.class);
                 startActivity(intentVaiParaMain);
+
+
             }
         });
 
+
+        botaoTeste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentVaiParaTeste = new Intent(TelaInicialActivity.this, CardapioActivity.class);
+                startActivity(intentVaiParaTeste);
+            }
+        });
 
 
     }
