@@ -1,5 +1,7 @@
 package com.digitalhouse.workshop.view;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,7 @@ public class CardapioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cardapio);
 
         ListView listaDoCardapio = (ListView) findViewById(R.id.lista);
+        FloatingActionButton buttonFloat = findViewById(R.id.button_float);
         final List<Cardapio> cardapio = todosOsItens();
 
 
@@ -33,13 +36,13 @@ public class CardapioActivity extends AppCompatActivity {
         CardapioAdapter adapter = new CardapioAdapter(this, cardapio);
         listaDoCardapio.setAdapter(adapter);
 
-        listaDoCardapio.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        buttonFloat.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(CardapioActivity.this, "Teste", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                Intent intentVaiParaMain = new Intent(CardapioActivity.this, SorveteActivity.class);
+                startActivity(intentVaiParaMain);
             }
         });
-
 
     }
 
@@ -47,6 +50,9 @@ public class CardapioActivity extends AppCompatActivity {
         return new ArrayList<>(Arrays.asList(
                 new Cardapio("Sorvete de chocolate", 6.00, false),
                 new Cardapio("Pizza Marguerita", 24.90, false),
-                new Cardapio("x-Burguer", 25.00, false)));
+                new Cardapio("x-Burguer", 25.00, false),
+                new Cardapio("Pizza de Toscana", 27.00, false),
+                new Cardapio("x-Salada", 26.50, false),
+                new Cardapio("Sorvete de Baunilha", 5.00, false)));
     }
 }

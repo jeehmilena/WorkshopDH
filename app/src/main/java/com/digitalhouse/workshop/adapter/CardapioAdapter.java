@@ -60,12 +60,12 @@ public class CardapioAdapter extends BaseAdapter {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 cardapio.setStatus(isChecked);
-                Toast.makeText(context, "Selecionado: "+cardapio.getNomeItem(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Selecionado: "+cardapio.getNomeItem()+" - "+cardapio.getPrecoItem(), Toast.LENGTH_SHORT).show();
             }
         });
 
         //passando os dados a cada item em seu respectivo componente
-        textViewTitulo.setText(cardapio.getNomeItem());
+        textViewTitulo.setText(cardapio.getNomeItem()+" - "+cardapio.getPrecoItem());
         checkBox.setChecked(cardapio.getStatus());
 
 
