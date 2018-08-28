@@ -1,6 +1,7 @@
 package com.digitalhouse.workshop.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,8 @@ public class CardapioAdapter extends BaseAdapter {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 cardapio.setStatus(isChecked);
                 Toast.makeText(context, "Selecionado: "+cardapio.getNomeItem()+" - "+cardapio.getPrecoItem(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

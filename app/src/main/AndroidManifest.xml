@@ -9,16 +9,17 @@
         android:roundIcon="@drawable/hamburguer"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.digitalhouse.workshop.view.TelaInicialActivity">
+        <activity android:name=".view.TelaInicialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.digitalhouse.workshop.view.PizzaActivity" />
-        <activity android:name="com.digitalhouse.workshop.view.SorveteActivity" />
-        <activity android:name="com.digitalhouse.workshop.view.CardapioActivity"></activity>
+        <activity android:name=".view.PizzaActivity" />
+        <activity android:name=".view.SorveteActivity" />
+        <activity android:name=".view.CardapioActivity" />
+        <activity android:name=".view.FinalizarPedidoActivity"></activity>
     </application>
 
 </manifest>

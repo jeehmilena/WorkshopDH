@@ -39,8 +39,16 @@ public class CardapioActivity extends AppCompatActivity {
         buttonFloat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentVaiParaMain = new Intent(CardapioActivity.this, SorveteActivity.class);
-                startActivity(intentVaiParaMain);
+
+
+                Bundle bundle = new Bundle();
+                bundle.putString("titulo", cardapio.get(0).getNomeItem());
+                bundle.putDouble("preco", cardapio.get(0).getPrecoItem());
+                bundle.putBoolean("pedido", cardapio.get(0).getStatus());
+
+                Intent intentVaiParaFinal = new Intent(CardapioActivity.this, FinalizarPedidoActivity.class);
+                intentVaiParaFinal.putExtra("pedido", bundle);
+                startActivity(intentVaiParaFinal);
             }
         });
 
