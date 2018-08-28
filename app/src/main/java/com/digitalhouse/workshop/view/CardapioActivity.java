@@ -47,6 +47,6 @@ public class CardapioActivity extends AppCompatActivity {
         return new ArrayList<>(Arrays.asList(
                 new Cardapio("Sorvete de chocolate", 6.00, false),
                 new Cardapio("Pizza Marguerita", 24.90, false),
-                new Cardapio("x-burguer", 25.00, false)));
+                new Cardapio("x-Burguer", 25.00, false)));
     }
 }

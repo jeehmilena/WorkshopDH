@@ -49,6 +49,7 @@
 
     <Button
         android:id="@+id/btnIniciar"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="298dp"
         android:layout_height="82dp"
         android:layout_marginBottom="8dp"
