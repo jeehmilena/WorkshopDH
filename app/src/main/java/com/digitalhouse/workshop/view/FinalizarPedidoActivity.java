@@ -17,14 +17,6 @@ public class FinalizarPedidoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_finalizar_pedido);
 
 
-        TextView textViewItemsSelecionado = findViewById(R.id.textview_itens_selecionados);
-        TextView textViewItem = findViewById(R.id.textview_item);
-
-        Intent intent = new Intent();
-        Bundle bundle = intent.getExtras();
-
-        String itemEscolhido = bundle.getString("titulo");
-        textViewItem.setText(itemEscolhido);
 
 
 
